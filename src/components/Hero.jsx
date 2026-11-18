@@ -9,8 +9,7 @@ import {
   Code2, 
   Database, 
   Server, 
-  Terminal,
-  Sparkles
+  Terminal
 } from 'lucide-react';
 import HeroCanvas from './HeroCanvas';
 import { personalInfo } from '../data/personal';
@@ -29,7 +28,7 @@ export default function Hero() {
       if (displayedText.length < currentWord.length) {
         timeout = setTimeout(() => {
           setDisplayedText(currentWord.substring(0, displayedText.length + 1));
-        }, 90);
+        }, 85);
       } else {
         timeout = setTimeout(() => {
           setIsDeleting(true);
@@ -39,7 +38,7 @@ export default function Hero() {
       if (displayedText.length > 0) {
         timeout = setTimeout(() => {
           setDisplayedText(currentWord.substring(0, displayedText.length - 1));
-        }, 45);
+        }, 40);
       } else {
         setIsDeleting(false);
         setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
@@ -89,16 +88,16 @@ export default function Hero() {
             className="lg:col-span-7 text-center lg:text-left space-y-6"
           >
             {/* Status / Greeting Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/25 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-xs sm:text-sm font-mono font-medium text-cyan-600 dark:text-cyan-300">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 dark:bg-cyan-500/10 border border-cyan-500/25 dark:border-cyan-400/25 backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
+              <span className="text-xs sm:text-sm font-mono font-medium text-[#635BDB] dark:text-cyan-300">
                 Hello World! 👋 I'm
               </span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-2">
-              <h1 className="text-4xl sm:text-6xl xl:text-7xl font-heading font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+              <h1 className="text-4xl sm:text-6xl xl:text-7xl font-heading font-extrabold tracking-tight text-[#172033] dark:text-white leading-[1.1]">
                 <span className="gradient-text block">
                   {personalInfo.shortName}
                 </span>
@@ -106,19 +105,19 @@ export default function Hero() {
 
               {/* Animated Typing Role */}
               <div className="h-10 sm:h-12 flex items-center justify-center lg:justify-start">
-                <p className="text-lg sm:text-2xl font-mono font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">
-                  <span className="text-cyan-600 dark:text-cyan-400 font-bold">
+                <p className="text-lg sm:text-2xl font-mono font-semibold text-[#172033] dark:text-slate-300 flex items-center gap-2">
+                  <span className="text-[#635BDB] dark:text-cyan-400 font-bold">
                     &gt;
                   </span>
-                  <span>{displayedText}</span>
-                  <span className="inline-block w-2.5 h-6 bg-cyan-500 dark:bg-cyan-400 animate-pulse ml-0.5" />
+                  <span className="gradient-text font-bold">{displayedText}</span>
+                  <span className="inline-block w-2.5 h-6 bg-[#635BDB] dark:bg-cyan-400 animate-pulse ml-0.5" />
                 </p>
               </div>
             </div>
 
             {/* Description */}
-            <p className="max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg text-slate-600 dark:text-slate-300/80 leading-relaxed font-normal">
-              Final-year BCA student passionate about architecting scalable full-stack applications using <strong className="text-slate-900 dark:text-slate-100 font-semibold">Python, Django, React.js</strong>, and modern database technologies. Turning ideas into impactful, production-ready software.
+            <p className="max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg text-[#526078] dark:text-slate-300/80 leading-relaxed font-normal">
+              Final-year BCA student passionate about architecting scalable full-stack applications using <strong className="text-[#172033] dark:text-slate-100 font-semibold">Python, Django, React.js</strong>, and modern database technologies. Turning ideas into impactful, production-ready software.
             </p>
 
             {/* Call to Actions */}
@@ -126,7 +125,7 @@ export default function Hero() {
               <a
                 href="#contact"
                 onClick={handleScrollToContact}
-                className="group relative inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-heading font-semibold text-sm sm:text-base text-slate-950 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 shadow-glow-cyan transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                className="group relative inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-heading font-semibold text-sm sm:text-base text-white dark:text-slate-950 bg-[#635BDB] dark:bg-gradient-to-r dark:from-cyan-400 dark:to-sky-400 hover:opacity-95 dark:hover:from-cyan-300 dark:hover:to-sky-300 shadow-glow-accent dark:shadow-glow-cyan transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Contact Me</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -137,16 +136,16 @@ export default function Hero() {
                 download="NS-Lohitha-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-heading font-semibold text-sm sm:text-base text-slate-800 dark:text-slate-200 bg-white/80 dark:bg-slate-900/60 border border-slate-300 dark:border-slate-700/60 hover:border-cyan-400/50 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-sm backdrop-blur-md"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-heading font-semibold text-sm sm:text-base text-[#172033] dark:text-slate-200 bg-white dark:bg-slate-900/60 border border-[rgba(30,50,90,0.15)] dark:border-slate-700/60 hover:border-[#635BDB] dark:hover:border-cyan-400/50 hover:bg-[#EDF1FA] dark:hover:bg-slate-800/60 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-sm backdrop-blur-md"
               >
-                <Download className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
+                <Download className="w-4 h-4 text-[#635BDB] dark:text-cyan-400" />
                 <span>Download Resume</span>
               </a>
             </div>
 
             {/* Social Icons Bar */}
             <div className="pt-4 flex items-center justify-center lg:justify-start gap-3">
-              <span className="text-xs uppercase tracking-wider text-slate-400/80 font-mono hidden sm:inline">
+              <span className="text-xs uppercase tracking-wider text-[#526078] dark:text-slate-400/80 font-mono hidden sm:inline">
                 Connect:
               </span>
               {personalInfo.socials.map((social) => (
@@ -155,7 +154,7 @@ export default function Hero() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-900/50 border border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-400/50 hover:scale-110 transition-all duration-300 shadow-sm"
+                  className="flex items-center justify-center w-11 h-11 rounded-xl bg-white dark:bg-slate-900/50 border border-[rgba(30,50,90,0.12)] dark:border-white/10 text-[#526078] dark:text-slate-300 hover:text-[#635BDB] dark:hover:text-cyan-400 hover:border-[#635BDB] dark:hover:border-cyan-400/50 hover:scale-110 transition-all duration-300 shadow-sm"
                   aria-label={social.name}
                   title={`${social.name} - ${social.handle}`}
                 >
@@ -180,14 +179,14 @@ export default function Hero() {
 
               {/* Decorative Rotating Border Ring */}
               <div 
-                className="absolute -inset-3 sm:-inset-4 rounded-full border border-dashed border-cyan-500/30 dark:border-cyan-400/20 animate-spin-slow pointer-events-none" 
+                className="absolute -inset-3 sm:-inset-4 rounded-full border border-dashed border-[#635BDB]/30 dark:border-cyan-400/20 animate-spin-slow pointer-events-none" 
               />
               
               {/* Secondary Gradient Ring */}
-              <div className="absolute -inset-1 sm:-inset-1.5 rounded-full bg-gradient-to-br from-cyan-400/40 via-blue-500/20 to-violet-500/40 opacity-70 blur-sm pointer-events-none" />
+              <div className="absolute -inset-1 sm:-inset-1.5 rounded-full bg-gradient-to-br from-[#635BDB]/40 dark:from-cyan-400/40 via-blue-500/20 to-violet-500/40 opacity-70 blur-sm pointer-events-none" />
 
               {/* Image Frame Container */}
-              <div className="relative w-full h-full rounded-full overflow-hidden p-1.5 bg-gradient-to-br from-cyan-400/50 via-slate-800 to-violet-500/50 shadow-2xl">
+              <div className="relative w-full h-full rounded-full overflow-hidden p-1.5 bg-gradient-to-br from-[#635BDB]/50 dark:from-cyan-400/50 via-slate-800 to-violet-500/50 shadow-2xl">
                 <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 border-2 border-slate-800/80">
                   <img
                     src={personalInfo.assets.heroImage}
@@ -202,16 +201,16 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-2 -right-4 sm:top-2 sm:right-0 flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-white/90 dark:bg-slate-900/85 backdrop-blur-xl border border-cyan-500/40 dark:border-cyan-400/40 shadow-glow-cyan"
+                className="absolute -top-2 -right-4 sm:top-2 sm:right-0 flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-white/95 dark:bg-slate-900/85 backdrop-blur-xl border border-[rgba(30,50,90,0.12)] dark:border-cyan-400/40 shadow-glass-light dark:shadow-glow-cyan"
               >
-                <div className="w-7 h-7 rounded-lg bg-blue-500/20 flex items-center justify-center text-cyan-600 dark:text-cyan-400">
+                <div className="w-7 h-7 rounded-lg bg-blue-500/10 dark:bg-blue-500/20 flex items-center justify-center text-[#635BDB] dark:text-cyan-400">
                   <Terminal className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono font-bold text-slate-900 dark:text-white block leading-tight">
+                  <span className="text-xs font-mono font-bold text-[#172033] dark:text-white block leading-tight">
                     Python
                   </span>
-                  <span className="text-[10px] text-cyan-600 dark:text-cyan-400 font-mono block">
+                  <span className="text-[10px] text-[#635BDB] dark:text-cyan-400 font-mono block">
                     Core Backend
                   </span>
                 </div>
@@ -221,16 +220,16 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5.2, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -bottom-4 -left-4 sm:bottom-4 sm:left-0 flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-white/90 dark:bg-slate-900/85 backdrop-blur-xl border border-blue-500/40 dark:border-blue-400/40 shadow-glass"
+                className="absolute -bottom-4 -left-4 sm:bottom-4 sm:left-0 flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-white/95 dark:bg-slate-900/85 backdrop-blur-xl border border-[rgba(30,50,90,0.12)] dark:border-blue-400/40 shadow-glass-light dark:shadow-glass"
               >
-                <div className="w-7 h-7 rounded-lg bg-cyan-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                <div className="w-7 h-7 rounded-lg bg-cyan-500/10 dark:bg-cyan-500/20 flex items-center justify-center text-cyan-700 dark:text-blue-400">
                   <Database className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono font-bold text-slate-900 dark:text-white block leading-tight">
+                  <span className="text-xs font-mono font-bold text-[#172033] dark:text-white block leading-tight">
                     MySQL
                   </span>
-                  <span className="text-[10px] text-blue-600 dark:text-blue-400 font-mono block">
+                  <span className="text-[10px] text-cyan-700 dark:text-blue-400 font-mono block">
                     Relational DB
                   </span>
                 </div>
@@ -240,16 +239,16 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4.8, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-                className="absolute bottom-6 -right-6 sm:bottom-12 sm:-right-4 flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-white/90 dark:bg-slate-900/85 backdrop-blur-xl border border-violet-500/40 dark:border-violet-400/40 shadow-glow-violet"
+                className="absolute bottom-6 -right-6 sm:bottom-12 sm:-right-4 flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-white/95 dark:bg-slate-900/85 backdrop-blur-xl border border-[rgba(30,50,90,0.12)] dark:border-violet-400/40 shadow-glass-light dark:shadow-glow-violet"
               >
-                <div className="w-7 h-7 rounded-lg bg-violet-500/20 flex items-center justify-center text-violet-600 dark:text-violet-400">
+                <div className="w-7 h-7 rounded-lg bg-violet-500/10 dark:bg-violet-500/20 flex items-center justify-center text-violet-700 dark:text-violet-400">
                   <Server className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono font-bold text-slate-900 dark:text-white block leading-tight">
+                  <span className="text-xs font-mono font-bold text-[#172033] dark:text-white block leading-tight">
                     Django & React
                   </span>
-                  <span className="text-[10px] text-violet-600 dark:text-violet-400 font-mono block">
+                  <span className="text-[10px] text-violet-700 dark:text-violet-400 font-mono block">
                     Full Stack
                   </span>
                 </div>

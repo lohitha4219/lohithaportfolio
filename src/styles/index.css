@@ -4,16 +4,22 @@
 
 @layer base {
   :root {
-    --bg-primary: #f8fafc;
-    --text-primary: #0f172a;
-    --card-bg: rgba(255, 255, 255, 0.85);
-    --card-border: rgba(226, 232, 240, 0.9);
+    --bg-primary: #F5F7FC;
+    --surface-primary: #FFFFFF;
+    --surface-secondary: #EDF1FA;
+    --text-primary: #172033;
+    --text-secondary: #526078;
+    --accent: #635BDB;
+    --card-border: rgba(30, 50, 90, 0.12);
   }
 
   html.dark {
     --bg-primary: #060d1f;
+    --surface-primary: rgba(11, 19, 43, 0.65);
+    --surface-secondary: rgba(15, 23, 42, 0.6);
     --text-primary: #f8fafc;
-    --card-bg: rgba(11, 19, 43, 0.65);
+    --text-secondary: #94a3b8;
+    --accent: #38bdf8;
     --card-border: rgba(255, 255, 255, 0.08);
   }
 
@@ -27,7 +33,7 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #EDF1FA;
   }
   html.dark ::-webkit-scrollbar-track {
     background: #030712;
@@ -37,7 +43,7 @@
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #0ea5e9;
+    background: #635BDB;
   }
   html.dark ::-webkit-scrollbar-thumb {
     background: #1e293b;
@@ -61,8 +67,8 @@
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(30, 50, 90, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 50, 90, 0.04) 1px, transparent 1px);
   background-size: 50px 50px;
   mask-image: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 0.85), transparent 75%);
   pointer-events: none;
@@ -77,11 +83,11 @@ html.dark .grid-overlay {
 /* Glass Card styling */
 .glass-panel {
   position: relative;
-  background: rgba(255, 255, 255, 0.85);
+  background: #FFFFFF;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(30, 50, 90, 0.12);
+  box-shadow: 0 10px 30px -5px rgba(30, 50, 90, 0.06);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -97,7 +103,7 @@ html.dark .glass-panel {
   position: absolute;
   inset: -60% -20% auto -60%;
   height: 220%;
-  background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, 0.2), transparent 65%);
+  background: linear-gradient(120deg, transparent 35%, rgba(99, 91, 219, 0.08), transparent 65%);
   transform: translateX(-100%);
   pointer-events: none;
   opacity: 0;
@@ -120,7 +126,7 @@ html.dark .glass-panel::after {
 
 /* Gradient Text Shimmer */
 .gradient-text {
-  background: linear-gradient(135deg, #0f172a 0%, #0284c7 50%, #7c3aed 100%);
+  background: linear-gradient(135deg, #172033 0%, #635BDB 55%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -132,7 +138,7 @@ html.dark .gradient-text {
 }
 
 .gradient-text-cyan {
-  background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
+  background: linear-gradient(135deg, #635BDB 0%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -1,12 +1,29 @@
 export const experience = [
   {
+    id: "inamigos-foundation-intern",
+    role: "Web Development Intern",
+    organization: "InAmigos Foundation",
+    duration: "Internship",
+    location: "Remote",
+    type: "Internship",
+    description: "Contributed to frontend web application development, responsive interface implementations, and digital experience enhancements.",
+    responsibilities: [
+      "Developed responsive and accessible web interface components using modern web standards",
+      "Collaborated on frontend workflows, component styling, and layout optimizations",
+      "Ensured mobile-friendly responsiveness and cross-browser visual consistency"
+    ],
+    technologies: ["HTML5", "CSS3", "JavaScript", "React.js", "Web Development"],
+    verifiedBadge: "Verified Internship",
+    accent: "indigo"
+  },
+  {
     id: "ai-trainee-wayeva",
     role: "Artificial Intelligence Trainee",
     organization: "Wayeva Innovations Pvt Ltd",
-    duration: "Practical Training & Industry Exposure",
+    duration: "Industry Training Exposure",
     location: "Remote / Hybrid",
-    type: "Industry Training / Internship",
-    description: "Engaged in hands-on exposure to AI principles, data analysis techniques, and practical machine intelligence workflows.",
+    type: "Industry Training",
+    description: "Engaged in hands-on exposure to artificial intelligence principles, data analysis techniques, and practical machine intelligence workflows.",
     responsibilities: [
       "Explored foundational data analysis pipelines and computational workflows using Python",
       "Gained practical exposure to modern AI paradigms, model concepts, and data preprocessing",
@@ -22,16 +39,16 @@ export const experience = [
     organization: "Independent Academic & Production Builds",
     duration: "2024 — Present",
     location: "Kuppam, Andhra Pradesh",
-    type: "Practical Project Development",
-    description: "Engineered and deployed complete multi-tier web applications solving real-world challenges in agriculture, ed-tech, and testing.",
+    type: "Production Engineering",
+    description: "Engineered and deployed complete multi-tier web applications solving real-world challenges in healthcare, institutional management, agriculture, and ed-tech.",
     responsibilities: [
-      "Architected and deployed AgriConnect — a full-stack farmer management platform with crop tracking and market analytics",
-      "Built FullStackQuiz interactive assessment platform with automated evaluation and instant scoring",
-      "Created PythonAcademy e-learning management system with role-based student and instructor access",
-      "Engineered backend REST APIs with Python/Django and connected secure relational MySQL databases"
+      "Engineered HealthAssist AI — an AI healthcare assistant with clinical triage and appointment booking",
+      "Built KEC Smart Campus Solution — an integrated campus management and hostel grievance system",
+      "Architected AgriConnect — a digital farmer management platform with crop tracking and live market analytics",
+      "Developed PythonAcademy — a modular e-learning platform with course management and assignment pipelines"
     ],
-    technologies: ["Python", "Django", "React.js", "MySQL", "REST APIs", "Tailwind CSS", "JavaScript"],
-    verifiedBadge: "3 Deployed Web Platforms",
+    technologies: ["Python", "FastAPI", "Django", "React.js", "PostgreSQL", "MySQL", "REST APIs", "Tailwind CSS"],
+    verifiedBadge: "4 Deployed Web Platforms",
     accent: "violet"
   }
 ];

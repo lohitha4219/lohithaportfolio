@@ -4,16 +4,19 @@ export const personalInfo = {
   initials: "NSL",
   role: "Python Full Stack Developer",
   typingRoles: [
-    "Python Full Stack Developer",
-    "Django Backend Specialist",
-    "React.js Frontend Developer",
-    "Relational Database Engineer",
-    "Passionate Problem Solver"
+    "Aspiring Full Stack Developer",
+    "Aspiring Django Developer",
+    "Web Developer",
+    "Python Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Software Developer",
+    "Software Engineer"
   ],
   bio: "Final-year BCA student passionate about architecting scalable full-stack applications with Python, Django, React.js, and modern database technologies. Dedicated to engineering clean code, intuitive user experiences, and reliable software architectures.",
   aboutText: [
     "I am a passionate software developer currently pursuing my Bachelor of Computer Applications (BCA) at Kuppam Degree College. My engineering journey is centered around modern full-stack development, combining robust Python/Django backend systems with dynamic, interactive React user interfaces.",
-    "I have designed, built, and shipped real-world production platforms including AgriConnect (an agricultural management system for farmers), FullStackQuiz (an online timed assessment engine), and PythonAcademy (a comprehensive e-learning management system).",
+    "I have designed, built, and shipped real-world production platforms including HealthAssist AI (an AI-powered healthcare assistant), KEC Smart Campus Solution (an integrated campus management system), AgriConnect (a digital agricultural platform), and PythonAcademy (a comprehensive e-learning management system).",
     "I thrive on solving intricate problems, writing clean modular code, optimizing database queries, and continuously expanding my technical repertoire."
   ],
   careerObjective: "Secure a Software Developer Internship or Entry-Level Software Engineer (SDE) role at a high-impact engineering organization where I can contribute to mission-critical products, build scalable systems, and collaborate with forward-thinking teams.",

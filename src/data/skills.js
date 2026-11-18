@@ -19,7 +19,6 @@ export const skillCategories = [
       { name: "HTML5", highlight: "Semantic Structure", icon: "Globe" },
       { name: "CSS3", highlight: "Modern Layouts & Animations", icon: "Palette" },
       { name: "Tailwind CSS", highlight: "Utility-First Styling", icon: "Sparkles" },
-      { name: "Bootstrap", highlight: "Responsive Grids", icon: "LayoutGrid" },
       { name: "Responsive UI", highlight: "Mobile-First Design", icon: "Smartphone" }
     ]
   },

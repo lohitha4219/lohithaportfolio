@@ -23,23 +23,23 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative z-10 pt-16 pb-12 border-t border-slate-200 dark:border-white/10 bg-slate-100/90 dark:bg-navy-950/80 backdrop-blur-xl">
+    <footer className="relative z-10 pt-16 pb-12 border-t border-[rgba(30,50,90,0.12)] dark:border-white/10 bg-white/95 dark:bg-navy-950/80 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Tier */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-10 border-b border-slate-200 dark:border-white/5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-10 border-b border-[rgba(30,50,90,0.08)] dark:border-white/5">
           
           {/* Identity */}
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center text-slate-950 font-heading font-extrabold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-[#635BDB] dark:bg-gradient-to-br dark:from-cyan-400 dark:to-violet-500 flex items-center justify-center text-white dark:text-slate-950 font-heading font-extrabold text-sm shadow-sm">
                 {personalInfo.initials}
               </div>
-              <h3 className="text-xl font-heading font-bold text-slate-900 dark:text-white">
+              <h3 className="text-xl font-heading font-bold text-[#172033] dark:text-white">
                 {personalInfo.fullName}
               </h3>
             </div>
-            <p className="text-xs font-mono text-cyan-600 dark:text-cyan-400 mt-1">
+            <p className="text-xs font-mono text-[#635BDB] dark:text-cyan-400 mt-1 font-semibold">
               {personalInfo.role} • BCA Degree Student
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-400/50 transition-all shadow-sm"
+                className="w-10 h-10 rounded-xl bg-[#EDF1FA] dark:bg-slate-900/60 border border-[rgba(30,50,90,0.12)] dark:border-white/10 flex items-center justify-center text-[#526078] dark:text-slate-300 hover:text-[#635BDB] dark:hover:text-cyan-400 hover:border-[#635BDB]/50 transition-all shadow-sm"
                 aria-label={social.name}
                 title={social.name}
               >
@@ -68,24 +68,24 @@ export default function Footer() {
           <button
             onClick={scrollToTop}
             type="button"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-white/10 text-xs font-mono text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-400/50 transition-all shadow-sm"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#EDF1FA] dark:bg-slate-900/60 border border-[rgba(30,50,90,0.12)] dark:border-white/10 text-xs font-mono text-[#172033] dark:text-slate-300 hover:text-[#635BDB] dark:hover:text-cyan-400 hover:border-[#635BDB]/50 transition-all shadow-sm"
             aria-label="Back to top of page"
           >
             <span>Back to top</span>
-            <ArrowUp className="w-3.5 h-3.5 text-cyan-500 dark:text-cyan-400" />
+            <ArrowUp className="w-3.5 h-3.5 text-[#635BDB] dark:text-cyan-400" />
           </button>
 
         </div>
 
         {/* Bottom Tier: Nav Links & Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs font-mono text-slate-500 dark:text-slate-400">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs font-mono text-[#526078] dark:text-slate-400">
           
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
             {navLinks.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                className="hover:text-[#635BDB] dark:hover:text-cyan-400 transition-colors"
               >
                 {item.name}
               </a>

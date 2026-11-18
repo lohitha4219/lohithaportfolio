@@ -8,6 +8,15 @@ export default {
   theme: {
     extend: {
       colors: {
+        light: {
+          bg: '#F5F7FC',
+          surface: '#FFFFFF',
+          surface2: '#EDF1FA',
+          text: '#172033',
+          muted: '#526078',
+          accent: '#635BDB',
+          border: 'rgba(30, 50, 90, 0.12)',
+        },
         navy: {
           950: '#030712',
           900: '#060d1f',
@@ -35,10 +44,10 @@ export default {
       },
       boxShadow: {
         'glass': '0 20px 50px -15px rgba(0, 0, 0, 0.5)',
-        'glass-hover': '0 25px 60px -12px rgba(14, 165, 233, 0.15)',
+        'glass-light': '0 10px 30px -5px rgba(30, 50, 90, 0.08)',
         'glow-cyan': '0 0 35px rgba(56, 189, 248, 0.25)',
         'glow-violet': '0 0 35px rgba(139, 92, 246, 0.25)',
-        'glow-card': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+        'glow-accent': '0 0 35px rgba(99, 91, 219, 0.25)',
       },
       animation: {
         'float-slow': 'float 8s ease-in-out infinite',

@@ -34,7 +34,7 @@ export default function App() {
   const activeSection = useScrollSpy(sectionIds, 150);
 
   return (
-    <div className="relative min-h-screen bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div className="relative min-h-screen bg-[#F5F7FC] dark:bg-navy-950 text-[#172033] dark:text-slate-100 transition-colors duration-300">
       {/* Top Scroll Indicator */}
       <ScrollProgress />
 
