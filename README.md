@@ -5,7 +5,7 @@ A modern, responsive personal portfolio built to showcase my skills, projects, e
 
 ## 🚀 Live Demo
 
-[View My Portfolio](#)
+https://lohithaportfolio-gray.vercel.app
 
 ## ✨ Features
 
