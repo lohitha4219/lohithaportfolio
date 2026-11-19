@@ -12,6 +12,7 @@ import { personalInfo } from '../data/personal';
 
 export default function Resume() {
   const resumeUrl = personalInfo.assets.resumePdf;
+  const downloadFileName = 'NSLohitha_Full stack_resume.pdf';
 
   const handleHireClick = (e) => {
     e.preventDefault();
@@ -78,8 +79,8 @@ export default function Resume() {
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#635BDB] dark:text-cyan-400 block mb-1">
                 Verified Document
               </span>
-              <h3 className="text-lg font-heading font-bold text-[#172033] dark:text-white mb-1">
-                NS-Lohitha-Resume.pdf
+              <h3 className="text-base sm:text-lg font-heading font-bold text-[#172033] dark:text-white mb-1 break-all">
+                {downloadFileName}
               </h3>
               <p className="text-xs text-[#526078] dark:text-slate-400 font-mono">
                 Python Full Stack Developer • BCA
@@ -88,7 +89,7 @@ export default function Resume() {
               <div className="mt-5 w-full pt-4 border-t border-[rgba(30,50,90,0.12)] dark:border-white/10 flex items-center justify-around text-xs font-mono text-[#526078] dark:text-slate-300">
                 <span>Format: PDF</span>
                 <span>•</span>
-                <span>Size: ~858 KB</span>
+                <span>Size: ~244 KB</span>
                 <span>•</span>
                 <span className="text-emerald-600 dark:text-emerald-400 font-bold">Current</span>
               </div>
@@ -121,12 +122,12 @@ export default function Resume() {
 
               {/* Action Buttons */}
               <div className="pt-4 flex flex-wrap items-center gap-3">
-                {/* View Resume Button */}
+                {/* View Resume Button (opens in separate browser tab) */}
                 <a
                   href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-heading font-semibold text-xs sm:text-sm text-white dark:text-slate-950 bg-[#635BDB] dark:bg-gradient-to-r dark:from-cyan-400 dark:to-sky-400 hover:opacity-95 dark:hover:from-cyan-300 dark:hover:to-sky-300 shadow-glow-accent dark:shadow-glow-cyan transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-heading font-semibold text-xs sm:text-sm text-white dark:text-slate-950 bg-[#635BDB] dark:bg-gradient-to-r dark:from-cyan-400 dark:to-sky-400 hover:opacity-95 dark:hover:from-cyan-300 dark:hover:to-sky-300 shadow-glow-accent dark:shadow-glow-cyan transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <Eye className="w-4 h-4" />
                   <span>View Resume</span>
@@ -135,10 +136,8 @@ export default function Resume() {
                 {/* Download Resume Button */}
                 <a
                   href={resumeUrl}
-                  download="NS-Lohitha-Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-heading font-semibold text-xs sm:text-sm text-[#172033] dark:text-slate-200 bg-white dark:bg-slate-900/60 border border-[rgba(30,50,90,0.15)] dark:border-slate-700/60 hover:border-[#635BDB] dark:hover:border-cyan-400/50 hover:bg-[#EDF1FA] dark:hover:bg-slate-800/60 transition-all shadow-sm"
+                  download={downloadFileName}
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-heading font-semibold text-xs sm:text-sm text-[#172033] dark:text-slate-200 bg-white dark:bg-slate-900/60 border border-[rgba(30,50,90,0.15)] dark:border-slate-700/60 hover:border-[#635BDB] dark:hover:border-cyan-400/50 hover:bg-[#EDF1FA] dark:hover:bg-slate-800/60 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-sm"
                 >
                   <Download className="w-4 h-4 text-[#635BDB] dark:text-cyan-400" />
                   <span>Download Resume</span>
@@ -148,7 +147,7 @@ export default function Resume() {
                 <a
                   href="#contact"
                   onClick={handleHireClick}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-heading font-semibold text-xs sm:text-sm text-emerald-800 dark:text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-500/20 transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-heading font-semibold text-xs sm:text-sm text-emerald-800 dark:text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <Briefcase className="w-4 h-4" />
                   <span>Hire Me</span>

@@ -346,7 +346,7 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="e.g. John Doe"
+                  placeholder="e.g. NS Lohitha"
                   className={`w-full px-4 py-3 rounded-xl bg-[#EDF1FA] dark:bg-slate-900/60 border ${
                     errors.name ? 'border-rose-500' : 'border-[rgba(30,50,90,0.12)] dark:border-white/10'
                   } focus:border-[#635BDB] dark:focus:border-cyan-400 focus:outline-none text-sm text-[#172033] dark:text-slate-100 placeholder:text-[#526078]/60 dark:placeholder:text-slate-500 transition-colors`}
@@ -366,7 +366,7 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="e.g. john@example.com"
+                  placeholder="e.g. lohitha@example.com"
                   className={`w-full px-4 py-3 rounded-xl bg-[#EDF1FA] dark:bg-slate-900/60 border ${
                     errors.email ? 'border-rose-500' : 'border-[rgba(30,50,90,0.12)] dark:border-white/10'
                   } focus:border-[#635BDB] dark:focus:border-cyan-400 focus:outline-none text-sm text-[#172033] dark:text-slate-100 placeholder:text-[#526078]/60 dark:placeholder:text-slate-500 transition-colors`}

@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Mail, 
   ArrowRight, 
   Download, 
-  Github, 
-  Linkedin, 
-  Code2, 
   Database, 
   Server, 
   Terminal
@@ -47,19 +43,6 @@ export default function Hero() {
 
     return () => clearTimeout(timeout);
   }, [displayedText, isDeleting, currentRoleIndex]);
-
-  const getSocialIcon = (name) => {
-    switch (name) {
-      case 'GitHub':
-        return <Github className="w-5 h-5" />;
-      case 'LinkedIn':
-        return <Linkedin className="w-5 h-5" />;
-      case 'LeetCode':
-        return <Code2 className="w-5 h-5" />;
-      default:
-        return <Mail className="w-5 h-5" />;
-    }
-  };
 
   const handleScrollToContact = (e) => {
     e.preventDefault();
@@ -133,7 +116,7 @@ export default function Hero() {
 
               <a
                 href={personalInfo.assets.resumePdf}
-                download="NS-Lohitha-Resume.pdf"
+                download="NSLohitha_Full stack_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-heading font-semibold text-sm sm:text-base text-[#172033] dark:text-slate-200 bg-white dark:bg-slate-900/60 border border-[rgba(30,50,90,0.15)] dark:border-slate-700/60 hover:border-[#635BDB] dark:hover:border-cyan-400/50 hover:bg-[#EDF1FA] dark:hover:bg-slate-800/60 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-sm backdrop-blur-md"
@@ -141,26 +124,6 @@ export default function Hero() {
                 <Download className="w-4 h-4 text-[#635BDB] dark:text-cyan-400" />
                 <span>Download Resume</span>
               </a>
-            </div>
-
-            {/* Social Icons Bar */}
-            <div className="pt-4 flex items-center justify-center lg:justify-start gap-3">
-              <span className="text-xs uppercase tracking-wider text-[#526078] dark:text-slate-400/80 font-mono hidden sm:inline">
-                Connect:
-              </span>
-              {personalInfo.socials.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-11 h-11 rounded-xl bg-white dark:bg-slate-900/50 border border-[rgba(30,50,90,0.12)] dark:border-white/10 text-[#526078] dark:text-slate-300 hover:text-[#635BDB] dark:hover:text-cyan-400 hover:border-[#635BDB] dark:hover:border-cyan-400/50 hover:scale-110 transition-all duration-300 shadow-sm"
-                  aria-label={social.name}
-                  title={`${social.name} - ${social.handle}`}
-                >
-                  {getSocialIcon(social.name)}
-                </a>
-              ))}
             </div>
 
           </motion.div>
@@ -191,7 +154,7 @@ export default function Hero() {
                   <img
                     src={personalInfo.assets.heroImage}
                     alt={personalInfo.fullName}
-                    className="w-full h-full object-cover object-center filter saturate-105 hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover object-top filter saturate-105 hover:scale-105 transition-transform duration-700 ease-out"
                     loading="eager"
                   />
                 </div>

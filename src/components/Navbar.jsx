@@ -108,8 +108,9 @@ export default function Navbar({ theme, toggleTheme, activeSection }) {
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
 
             <a
-              href="#resume"
-              onClick={(e) => handleLinkClick(e, '#resume')}
+              href={personalInfo.assets.resumePdf}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-[#635BDB]/10 dark:bg-gradient-to-r dark:from-cyan-500/15 dark:to-violet-500/15 hover:bg-[#635BDB]/20 text-[#635BDB] dark:text-cyan-300 border border-[#635BDB]/30 dark:border-cyan-400/30 hover:border-[#635BDB]/60 transition-all duration-300 shadow-sm"
             >
               <FileText className="w-3.5 h-3.5" />

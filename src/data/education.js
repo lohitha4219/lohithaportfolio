@@ -1,7 +1,7 @@
 export const education = [
   {
     id: "bca",
-    period: "2024 — 2028",
+    period: "2024 – 2027",
     status: "Currently in 3rd Year",
     degree: "Bachelor of Computer Applications (BCA)",
     institution: "Kuppam Degree College",

@@ -92,7 +92,7 @@ export default function Certificates() {
               >
                 <div>
                   {/* Top Bar with Icon & Category Badge */}
-                  <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 rounded-2xl bg-[#635BDB]/10 dark:bg-cyan-500/15 border border-[#635BDB]/20 dark:border-cyan-400/30 flex items-center justify-center text-[#635BDB] dark:text-cyan-400 shadow-glow-accent dark:shadow-glow-cyan">
                       <Icon className="w-6 h-6" />
                     </div>
@@ -102,17 +102,37 @@ export default function Certificates() {
                     </span>
                   </div>
 
+                  {/* Certificate Image Thumbnail Card */}
+                  <div
+                    onClick={() => setSelectedCert(cert)}
+                    className="relative w-full h-44 sm:h-52 rounded-2xl overflow-hidden mb-5 bg-slate-950 border border-[rgba(30,50,90,0.12)] dark:border-white/10 cursor-pointer group/thumb shadow-inner flex items-center justify-center"
+                    title="Click to view full certificate"
+                  >
+                    <img
+                      src={cert.image}
+                      alt={cert.alt}
+                      className="max-h-full max-w-full w-auto h-auto object-contain p-2 group-hover/thumb:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/95 dark:bg-slate-900 text-xs font-mono font-semibold text-[#172033] dark:text-cyan-300 shadow-lg">
+                        <Eye className="w-3.5 h-3.5 text-[#635BDB] dark:text-cyan-400" />
+                        <span>View Full Certificate</span>
+                      </span>
+                    </div>
+                  </div>
+
                   {/* Title & Organization */}
                   <h3 className="text-xl font-heading font-bold text-[#172033] dark:text-white leading-snug group-hover:text-[#635BDB] dark:group-hover:text-cyan-300 transition-colors">
                     {cert.title}
                   </h3>
 
-                  <p className="text-xs font-mono text-[#635BDB] dark:text-cyan-400 mt-1 mb-4 font-semibold">
+                  <p className="text-xs font-mono text-[#635BDB] dark:text-cyan-400 mt-1 mb-3 font-semibold">
                     {cert.issuer}
                   </p>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-[#526078] dark:text-slate-300/80 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-[#526078] dark:text-slate-300/80 leading-relaxed mb-4">
                     {cert.description}
                   </p>
 
@@ -150,7 +170,7 @@ export default function Certificates() {
       {/* Certificate Modal / Lightbox */}
       <CertificateModal
         certificate={selectedCert}
-        isOpen={Boolean(selectedCert)}
+        isOpen={!!selectedCert}
         onClose={() => setSelectedCert(null)}
       />
     </section>

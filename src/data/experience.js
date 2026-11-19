@@ -1,22 +1,5 @@
 export const experience = [
   {
-    id: "inamigos-foundation-intern",
-    role: "Web Development Intern",
-    organization: "InAmigos Foundation",
-    duration: "Internship",
-    location: "Remote",
-    type: "Internship",
-    description: "Contributed to frontend web application development, responsive interface implementations, and digital experience enhancements.",
-    responsibilities: [
-      "Developed responsive and accessible web interface components using modern web standards",
-      "Collaborated on frontend workflows, component styling, and layout optimizations",
-      "Ensured mobile-friendly responsiveness and cross-browser visual consistency"
-    ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "React.js", "Web Development"],
-    verifiedBadge: "Verified Internship",
-    accent: "indigo"
-  },
-  {
     id: "ai-trainee-wayeva",
     role: "Artificial Intelligence Trainee",
     organization: "Wayeva Innovations Pvt Ltd",
@@ -32,6 +15,23 @@ export const experience = [
     technologies: ["Python", "Artificial Intelligence", "Data Analysis", "Problem Solving"],
     verifiedBadge: "Verified Training Certificate",
     accent: "cyan"
+  },
+  {
+    id: "inamigos-foundation-intern",
+    role: "Web Development Intern",
+    organization: "InAmigos Foundation",
+    duration: "Internship",
+    location: "Remote",
+    type: "Internship",
+    description: "Contributed to frontend web application development, responsive interface implementations, and digital experience enhancements.",
+    responsibilities: [
+      "Developed responsive and accessible web interface components using modern web standards",
+      "Collaborated on frontend workflows, component styling, and layout optimizations",
+      "Ensured mobile-friendly responsiveness and cross-browser visual consistency"
+    ],
+    technologies: ["HTML5", "CSS3", "JavaScript", "React.js", "Web Development"],
+    verifiedBadge: "Verified Internship",
+    accent: "indigo"
   },
   {
     id: "fullstack-projects-lead",
